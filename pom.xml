@@ -8,5 +8,13 @@
     <artifactId>fastcode</artifactId>
     <version>0.1</version>
 
-    
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+    </dependencies>
+
+
 </project>
