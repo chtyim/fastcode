@@ -1,4 +1,4 @@
-package org.fastcode;
+package org.fastcode.reader;
 
 import org.fastcode.type.GenuineType;
 

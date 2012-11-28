@@ -11,6 +11,7 @@
     <modules>
         <module>fastcode-core</module>
         <module>fastcode-avro</module>
+        <module>fastcode-json</module>
     </modules>
 
     <dependencyManagement>

@@ -12,10 +12,17 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class for representing type information of the given type {@code T}
+ */
 public abstract class GenuineType<T> {
 
     private final Type type;
     private final Class<?> rawClass;
+
+    public static GenuineType<?> of(Type type) {
+        return new GenuineType<Object>(type) { };
+    }
 
     protected GenuineType() {
         Map<String, Type> resolvedTypes = new HashMap<String, Type>();
@@ -92,7 +99,7 @@ public abstract class GenuineType<T> {
             }
         } while (!clz.equals(declaringClass));
 
-        return new GenuineType<Object>(resolveType(targetType, resolvedTypes)) { };
+        return of(resolveType(targetType, resolvedTypes));
     }
 
     @Override
